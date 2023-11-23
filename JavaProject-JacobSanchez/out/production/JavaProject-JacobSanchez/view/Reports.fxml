@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="554.0" prefWidth="569.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReportsController">
+   <children>
+      <Label layoutX="245.0" layoutY="29.0" text="Reports">
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="AppointmentTable" layoutX="20.0" layoutY="72.0" prefHeight="243.0" prefWidth="527.0">
+        <columns>
+            <TableColumn fx:id="Appointment_ID" prefWidth="38.0" text="ID" />
+          <TableColumn fx:id="Title" minWidth="0.0" prefWidth="36.0" text="Title" />
+            <TableColumn fx:id="Description" prefWidth="62.0" text="Description" />
+            <TableColumn fx:id="Type" minWidth="0.0" prefWidth="66.0" text="Type" />
+            <TableColumn fx:id="Start" minWidth="0.0" prefWidth="109.0" text="Start Date / Time" />
+            <TableColumn fx:id="End" minWidth="0.0" prefWidth="103.0" text="End Date / Time" />
+            <TableColumn fx:id="Customer_ID" minWidth="0.0" prefWidth="112.0" text="Customer ID" />
+
+        </columns>
+      </TableView>
+      <ButtonBar prefHeight="40.0" prefWidth="200.0" />
+      <ComboBox fx:id="ContactComboBox" layoutX="206.0" layoutY="360.0" prefWidth="150.0" promptText="Filter By Contact" />
+      <ComboBox fx:id="MonthComboBox" layoutX="121.0" layoutY="440.0" prefWidth="150.0" promptText="Month" />
+      <ComboBox fx:id="TypeComboBox" layoutX="290.0" layoutY="440.0" prefWidth="150.0" promptText="Type" />
+      <Label layoutX="89.0" layoutY="406.0" text="Total Number of Appointments by Month and Type">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="20.0" layoutY="44.0" mnemonicParsing="false" onAction="#onActionGoHome" text="Home" textFill="#4408ff">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="201.0" layoutY="484.0" text="Total # of Customers">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="254.0" layoutY="517.0" mnemonicParsing="false" onAction="#onActionCount" text="Click" />
+      <Label layoutX="220.0" layoutY="328.0" text="Filter By Contact">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
