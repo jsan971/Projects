@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+    <category>
+        <pattern>start ^</pattern>
+        <template>Hello, I am a personal assistant for the Computer Science department! Select any of the options below :) 
+            <button>
+                <text>Top 5 Careers</text>
+                <postback>top jobs</postback>
+            </button>
+            <button>
+                <text>Help me decide</text>
+                <postback>find career</postback>
+            </button>    
+        </template>
+    </category>
+    
+    <category>
+        <pattern>top jobs</pattern>
+        <template>Top 5 Computer Science jobs:
+            <button>
+                <text>Front-end Developer</text>
+                <postback>frontend developer</postback>
+            </button>
+            <button>
+                <text>
+                    Database Developer
+                </text>
+                <postback> 
+                    database developer
+                </postback>
+            </button>
+            <button>
+                <text>
+                    Software Engineer
+                </text>
+                <postback> 
+                    software engineer
+                </postback>
+            </button>
+            <button>
+                <text>
+                    Cybersecurity Specialist
+                </text>
+                <postback> 
+                    cyber security
+                </postback>
+            </button>
+             <button>
+                <text>
+                    IT Specialist
+                </text>
+                <postback> 
+                    it
+                </postback>
+            </button>
+        </template>
+    </category>
+    
+ <category>
+        <pattern>find career</pattern>
+        <template>
+        <br></br><br></br>
+        Do you enjoy front-end development more than back-end development? 
+            <button>
+                <text>yes</text>
+                <postback>frontend question</postback>
+            </button>
+            <button>
+                <text>no</text>
+                <postback>backend question</postback>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>backend question</pattern>
+        <template> Do you have experience with relational database systems?
+            <button>
+                <text>yes</text>
+                <postback>backend question 2</postback>
+            </button>
+            <button>
+                <text>no</text>
+                <postback>cyber question</postback>
+            </button>
+        </template>
+    </category>
+     <category>
+        <pattern>cyber question</pattern>
+        <template> Do you like finding weaknesses in applications?
+            <button>
+                <text>yes</text>
+                <postback>cyber question 2</postback>
+            </button>
+            <button>
+                <text>no</text>
+                <postback>it question</postback>
+            </button>
+        </template>
+    </category>
+    <category>
+        <pattern>it question</pattern>
+        <template> Do you enjoy configuring networks?
+            <button>
+                <text>yes</text>
+                <postback>it question 2</postback>
+            </button>
+                 <button>
+                <text>no</text>
+                <postback>no job found</postback>
+            </button>
+        </template>
+    </category>
+    <category>
+        <pattern>it question 2</pattern>
+        <template> Do you have experience with Windows Server?
+            <button>
+                <text>yes</text>
+                <postback>it question 3</postback>
+            </button>
+                 <button>
+                <text>no</text>
+                <postback>no job found</postback>
+            </button>
+        </template>
+    </category>
+      <category>
+        <pattern>cyber question 2</pattern>
+        <template> Do you have experience with penetration and load testing?
+            <button>
+                <text>yes</text>
+                <postback>cyber question 3</postback>
+            </button>
+            <button>
+                <text>no</text>
+                <postback>it question</postback>
+            </button>
+        </template>
+    </category>
+    <category>
+        <pattern>backend question 2</pattern>
+        <template> Do you have experience with SQL
+            <button>
+                <text>yes</text>
+                <postback>backend question 3</postback>
+            </button>
+            <button>
+                <text>no</text>
+                <postback>software engineering question</postback>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>frontend question</pattern>
+        <template> Do you have experience with HTML5, CSS, and JavaScript? 
+            <button>
+                <text>yes</text>
+                <postback>frontend question 2</postback>
+            </button>
+            <button>
+                <text>no</text>
+                <postback>software engineering question</postback>
+            </button>
+            
+        </template>
+    </category>
+    <category>
+        <pattern>software engineering question</pattern>
+        <template> Do you have experience in Python?
+            <button>
+                <text>yes</text>
+                <postback>software engineering question 2</postback>
+            </button>
+             <button>
+                <text>no</text>
+                <postback>it question</postback>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>software engineering question 2</pattern>
+        <template> Do you enjoy data structures and algorithms?
+            <button>
+                <text>yes</text>
+                <postback>software engineering question 3</postback>
+            </button>
+              <button>
+                <text>no</text>
+                <postback>no job found</postback>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>frontend question 2</pattern>
+        <template> Do you like to build web apps? 
+            <button>
+                <text>yes</text>
+                <postback>frontend question 3</postback>
+            </button>
+              <button>
+                <text>no</text>
+                <postback>no job found</postback>
+            </button>
+        </template>
+    </category>
+    
+      <category>
+        <pattern>no job found</pattern>
+        <template> 
+        Please contact your enrollment counselor to discuss your expertise. 
+        <br></br><br></br>
+        Type "contact" to book an appointment. 
+        </template>
+    </category>
+    <category>
+        <pattern>assistance</pattern>
+           <template> 
+        Please contact your enrollment counselor. 
+        <br></br><br></br>
+        Type "contact" to book an appointment. 
+        </template>
+    </category>
+     <category>
+        <pattern>help ^</pattern>
+           <template> 
+        Please contact your enrollment counselor. 
+        <br></br><br></br>
+        Type "contact" to book an appointment. 
+        </template>
+    </category>
+  <category>
+        <pattern>contact ^</pattern>
+        <template> 
+        Office Hours 8:00 AM to 12:00 PM CT
+        <br></br><br></br>
+         <button>
+         <text>8:00 AM CT</text>
+            <postback>You got it</postback>
+         </button>
+          <button>
+         <text>9:00 AM CT</text>
+            <postback>You got it</postback>
+         </button>
+            <button>
+         <text>10:00 AM CT</text>
+            <postback>You got it</postback>
+         </button>
+            <button>
+         <text>11:00 AM CT</text>
+            <postback>You got it</postback>
+         </button>
+           <button>
+         <text>12:00 PM CT</text>
+            <postback>You got it</postback>
+         </button>
+        </template>
+    </category>
+    
+       <category>
+        <pattern>You got it</pattern>
+        <template> 
+        Appointment has been booked. An enrollment counselor will be reaching out at the appointment time. 
+        </template>
+    </category>
+  
+</aiml>

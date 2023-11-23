@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<category>
+	    <pattern>database developer</pattern>
+	    <template>
+	       Database developers are responsible creating and troubleshooting databases that process a lot of data. 
+	       <br></br><br></br>
+	       <link>
+	           <text>Click to learn more!</text>
+	           <url>https://www.indeed.com/hire/job-description/database-developer</url>
+	       </link>
+	       <button>
+	           <text>See other career types.</text>
+	           <postback>top jobs</postback>
+	       </button>
+	       <button>
+	           <text>Help me find a career.</text>
+	           <postback>find career</postback>
+	       </button>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>backend question 3</pattern>
+	    <template>
+	        Database development may be for you!
+	        <br></br><br></br>
+	       Database developers are responsible creating and troubleshooting databases that process a lot of data. 
+	       <br></br>
+	       <link>
+	           <text>Click to learn more!</text>
+	           <url>https://www.indeed.com/hire/job-description/database-developer</url>
+	       </link>
+	         <button>
+	           <text>See other career types.</text>
+	           <postback>top jobs</postback>
+	       </button>
+	       <button>
+	           <text>Help me find a career.</text>
+	           <postback>find career</postback>
+	       </button>
+	    </template>
+	</category>
+</aiml>

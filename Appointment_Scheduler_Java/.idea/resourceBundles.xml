@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ResourceBundleManager">
+    <custom-resource-bundle>
+      <file value="file://$PROJECT_DIR$/src/sample/Detect_en_US.properties" />
+      <file value="file://$PROJECT_DIR$/src/sample/Detect_fr_FR.properties" />
+      <base-name>resourcebundle</base-name>
+    </custom-resource-bundle>
+  </component>
+</project>
