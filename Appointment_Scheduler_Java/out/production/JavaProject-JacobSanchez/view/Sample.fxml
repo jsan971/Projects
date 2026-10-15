@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="221.0" style="-fx-background-color: A3CFA7;">
+         <children>
+            <Label layoutX="78.0" layoutY="128.0" text="%login" textAlignment="CENTER">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="33.0" layoutY="212.0" text="Jacob Sanchez - C195 Project" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="400.0" prefWidth="381.0">
+         <children>
+            <Label layoutX="16.0" layoutY="161.0" text="%Username" />
+           <Label fx:id="country" layoutX="113.0" layoutY="52.0" text="Country" textAlignment="CENTER" textFill="RED">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label layoutX="16.0" layoutY="204.0" text="%Password" />
+            <TextField fx:id="username_field" layoutX="113.0" layoutY="157.0" prefHeight="25.0" prefWidth="254.0" promptText="Username" text="%Username" />
+            <TextField fx:id="password_field" layoutX="113.0" layoutY="200.0" prefHeight="25.0" prefWidth="254.0" promptText="Password" text="%Password" />
+            <Button fx:id="login_button" layoutX="113.0" layoutY="263.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="254.0" style="-fx-background-color: A3CFA7;" text="%login_button">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>

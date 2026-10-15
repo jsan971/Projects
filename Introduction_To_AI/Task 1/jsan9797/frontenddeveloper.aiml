@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<category>
+	    <pattern>frontend developer</pattern>
+	    <template>
+	       Front-end Developers are developers that specialize in creating and designing user interface and user experience for web apps!
+	       <br></br><br></br>
+	       <link>
+	           <text>Click to learn more!</text>
+	           <url>https://www.indeed.com/hire/job-description/front-end-developer</url>
+	       </link>
+	       <button>
+	           <text>See other career types.</text>
+	           <postback>top jobs</postback>
+	       </button>
+	       <button>
+	           <text>Help me find a career</text>
+	           <postback>find career</postback>
+	       </button>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>frontend question 3</pattern>
+	    <template>
+	        Front-end development may be for you!
+	        <br></br><br></br>
+	   Front-end Developers are developers that specialize in creating and designing user interface and user experience for web apps!
+	       <br></br>
+	       <link>
+	           <text>Click to learn more!</text>
+	           <url>https://www.indeed.com/hire/job-description/front-end-developer</url>
+	       </link>
+	         <button>
+	           <text>See other career types.</text>
+	           <postback>top jobs</postback>
+	       </button>
+	       <button>
+	           <text>Help me find a career.</text>
+	           <postback>find career</postback>
+	       </button>
+	    </template>
+	</category>
+</aiml>

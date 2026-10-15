@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<category>
+	    <pattern>software engineer</pattern>
+	    <template>
+	       Software engineers are responsible developing software programs or systems.
+	       <br></br><br></br>
+	       <link>
+	           <text>Click to learn more!</text>
+	           <url>https://www.indeed.com/hire/job-description/software-engineer</url>
+	       </link>
+	       <button>
+	           <text>See other career types</text>
+	           <postback>top jobs</postback>
+	       </button>
+	       <button>
+	           <text>Help me find a career</text>
+	           <postback>find career</postback>
+	       </button>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>software engineering question 3</pattern>
+	    <template>
+	        Software Engineering may be for you!
+	        <br></br><br></br>
+	        Software engineers are responsible developing software programs or systems.
+	       <br></br>
+	       <link>
+	           <text>Click to learn more!</text>
+	           <url>https://www.indeed.com/hire/job-description/software-engineer</url>
+	       </link>
+	         <button>
+	           <text>See other career types.</text>
+	           <postback>top jobs</postback>
+	       </button>
+	       <button>
+	           <text>Help me find a career.</text>
+	           <postback>find career</postback>
+	       </button>
+	    </template>
+	</category>
+</aiml>
