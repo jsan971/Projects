@@ -1,0 +1,148 @@
+﻿Jacob Sanchez
+Lee Houchin
+Software Engineering 
+08/31/2026
+
+
+Project 1 Proposal - Task Tracker
+App Name : doit
+App Description: The purpose of this application is to track user tasks through a terminal (command line interface). The application is designed for a single user to organize and track tasks.
+Storage Solution : The application will use a local .txt file for persistent storage. When the application is started, it will load existing tasks. Such modifications like adding, removing, deleting a task will update the applications memory and append these changes into the storage file txt. This will help prevent data loss for when the application is closed or terminated. 
+Core Features: 
+* Create, Read, Update and Delete (CRUD)
+* Persistent  storage via local txt file to add/modify changes automatically this prevents data loss such the application is terminated abruptly 
+* Task Status (Pending, In Progress, Complete) - Allow the user to add or modify a task’s status. 
+* Clear all tasks - Provide the ability to wipe all tasks within the application and resetting the tasks.txt 
+* Color Coded Console Output. Given this is a terminal based application, readability is important. Status will have specific colors assigned when viewing/displaying the list of tasks that include a status. 
+   * Pending = Blue
+   * In Progress = Green
+   * Complete = Red
+Stretch Features:  
+* Due Dates - Allow the user to add specific due dates for new and existing tasks
+* Filtering - Allow the user to filter based on the tasks that have a set status which are pending, completed or in progress.
+
+
+
+
+Main Classes / Modules : 
+Core class 1 : Task
+* This will contain attributes about the overall project and its scope. Minimal logic in this core class called Task.
+Class 2 : Manager (manages the CRUD operations) 
+* This will handle the majority of the core features of the application and persisting our storage to a local txt file such that there are any changes to the tasks.
+Class 3: Handling the CLI interface / display menus
+* This class will handle the interaction between the user and displaying output to the console.
+* The input provided from user will also be passed to our Manager class
+Module : TaskValidator 
+* This module will provide reusable methods for the input validation from the user for our core features. 
+
+
+Test Cases: Core Features
+Test Case 1 : Pass
+1. Objective : Add a new task + status
+2. Initial State : The application is running from the main menu
+3. Steps : 
+   1. Select “1. Add a new task”
+   2. User Input : “Swimming class”
+   3. Input “y” to confirm 
+   4. Display “Enter the status of the following task (Pending, In Progress, Complete)
+   5. Input <status>
+   6. Input “y” to confirm 
+4. Result : The app will create an identifier or (ID) for the task and will write the output to the tasks.txt which would be the ID, task name and the status
+Test Case 2 : Fail 
+1. Objective : Add a new task or status with empty/invalid inputs
+2. Initial State : Application is running from the main menu
+3. Steps : 
+   1. Select “1. Add a new task”
+   2. User Input : “ “, blank spaces or invalid data types
+   3. Once confirmed… the same logic will apply to setting a task status
+   4. Display “Enter the status of the following task (Pending, In Progress, Complete)
+   5. User Input : “ “, blank spaces or invalid data types
+4. Result : The TaskValidator will reject the user input and prompt to re-enter a task or status. Until then, no writing is performed to task.txt
+Test Case 4 : Pass
+1. Objective : Read the current tasks
+2. Initial State : The tasks.txt has to have 1 or more entries logged.
+3. Steps: Select “2. View current tasks” 
+4. Result : The application will parse through the task.txt file into readable way and displays it
+Test Case 5 : Pass
+1. Objective : Update Status
+2. Initial State : ID for task 2 needs to be saved in the tasks.txt file
+3. Steps :
+   1. Select “3. Update Status” 
+   2. Input task ID “2”
+   3. Display “Enter the status of the following status (Pending, In Progress, Complete)
+   4. Input “y” to confirm 
+Result : The app will keep the existing identifier or (ID) for the task and overwrite the existing status for the task in tasks.txt
+Test Case 6 : Fail
+4. Objective : Update Status
+5. Initial State : The app only has the tasks from 1 through 5 in tasks.txt
+6. Steps: 
+   1. Select “3. Update status”
+   2. Input Task ID “8”
+7. Result: The TaskValidator will reject the user input and prompt to re-enter a status until valid. No writing is performed to task.tx
+Test Case 7 : Pass
+Objective : Update Task
+Initial State : The app only has the tasks from 1 through 5
+Steps: 
+1. Select “4. Update a Task”
+   1. Input Task ID “4”
+   2. User Input : “Swimming class”
+   3. Input “y” to confirm 
+Result : The app will keep the existing identifier or (ID) for the task and overwrite the existing task associated to the ID in the tasks.txt
+Test Case 8: Fail
+1. Objective : Update Task
+2. Initial State : The app only has the tasks from 1 through 5
+3. Steps: 
+   1. Select “3. Update a task”
+   2. Input Task ID “8”
+4. Result: The TaskValidator will reject the user input and prompt to re-enter a task until valid. No writing is performed to task.txt
+Test Case 9: Pass
+1. Objective : Delete a task
+2. Initial state : Task ID has to exist in task.txt 
+3. Steps: 
+   1. Select “4. Delete a task” 
+   2. Input Task ID “3”
+   3. Input “y” to confirm changes
+4. Result : The app will remove task ID from memory and then removes the task from the tasks.txt file and then will display the current tasks.
+Test Case 10: Fail
+1. Objective : Delete a task
+2. Initial state : Task ID has to exist in task.txt 
+3. Steps: 
+   1. Select “4. Delete a task” 
+   2. Input an invalid task ID or string
+   3. Input “y” to confirm changes
+     4.  Result: The TaskValidator will reject the user input and prompt to re-enter a task until valid. No writing is performed to task.txt
+Test Case 11: 
+Objective : View tasks with a pending status displayed in blue
+Initial State Contain at least one task with a pending status
+Steps: 
+* Select “2. View current tasks” 
+* Expect the pending status text to be displayed in blue
+Test Case 12:
+Objective : View tasks with In Progress status displayed in blue
+Initial State Contain at least one task with In Progress status
+Steps: 
+* Select “2. View current tasks” 
+* Expect the In Progress status text to be displayed in green
+Test Case 13: 
+Objective : View tasks with complete status displayed in red
+Initial State Contain at least one task with Complete status
+Steps: 
+* Select “2. View current tasks” 
+* Expect the complete status text to be displayed in red
+Test Case 14: Pass
+Objectives: The ability to clear all tasks in tasks.txt
+Initial State: Require at least one entry in tasks.txt
+Steps: 
+* “Select 5. Clear all tasks”
+* Input “5”
+* Input “y” to confirm changes or “q” to quit
+Result: The tasks.txt file will be completely wiped. 
+Test Case 15 : Fail
+Objectives: The ability to clear all tasks in tasks.txt
+Initial State: Require at least one entry in tasks.txt
+Steps: 
+* “Select 5. Clear all tasks”
+* Input “5”
+* Input “y” to confirm changes or “q” to quit
+* User Input : “ “, blank spaces or invalid option 
+Result : The TaskValidator will reject the user input and prompt to re-enter the input until valid. No writing is performed to task.txt
